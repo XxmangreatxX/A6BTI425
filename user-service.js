@@ -175,16 +175,3 @@ module.exports.removeHistory = function (id, historyId) {
             })
     });
 }
-
-module.exports.findUserById = function (id) {
-    return new Promise((resolve, reject) => {
-        // Assuming User is your mongoose model
-        User.findById(id, (err, user) => {
-            if (err) {
-                reject(err);
-            } else {
-                resolve(user);
-            }
-        });
-    });
-};
